@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Code ML - SC escrita</title>
+</head>
+<body style="font-family:sans-serif;padding:2rem">
+<h2>App SC (escrita)</h2>
+<p>Code:</p>
+<input id="c" readonly style="width:100%;font-size:1rem;padding:.5rem">
+<button onclick="navigator.clipboard.writeText(c.value)">Copiar</button>
+<script>
+  const c = document.getElementById('c');
+  c.value = new URLSearchParams(location.search).get('code') || 'Nenhum code na URL';
+</script>
+</body>
+</html>
